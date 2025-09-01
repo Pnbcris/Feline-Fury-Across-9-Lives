@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://diy5yr2y0vw3q"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_opram"]
+radius = 6.32456
+
+[node name="mainCharacter" type="Node2D"]
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="characterAudio" type="AudioStreamPlayer2D" parent="."]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource("CircleShape2D_opram")
