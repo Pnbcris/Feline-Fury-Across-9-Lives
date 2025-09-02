@@ -5,8 +5,11 @@
 
 [node name="mainCharacter" instance=ExtResource("1_k8mav")]
 
+[node name="AnimatedSprite2D" parent="." index="1"]
+frame_progress = 0.870182
+
 [node name="TileMapLayer" parent="." index="5" instance=ExtResource("2_66vcd")]
 position = Vector2(-11, 54)
 
 [node name="Camera2D" type="Camera2D" parent="." index="6"]
-zoom = Vector2(3, 3)
+zoom = Vector2(10, 10)

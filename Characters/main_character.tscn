@@ -1,6 +1,63 @@
-[gd_scene load_steps=3 format=3 uid="uid://diy5yr2y0vw3q"]
+[gd_scene load_steps=11 format=3 uid="uid://diy5yr2y0vw3q"]
 
-[ext_resource type="Texture2D" uid="uid://nqs3f33djbat" path="res://Sprites/currency/hiddenCoins_64x64.png" id="1_vre1c"]
+[ext_resource type="Texture2D" uid="uid://687t2pah8r88" path="res://Sprites/characters/anonymousCat_face-Sheet.png" id="1_vre1c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3hfbw"]
+atlas = ExtResource("1_vre1c")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j1i5p"]
+atlas = ExtResource("1_vre1c")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l4u3x"]
+atlas = ExtResource("1_vre1c")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kcn2i"]
+atlas = ExtResource("1_vre1c")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e6jxr"]
+atlas = ExtResource("1_vre1c")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aqwq2"]
+atlas = ExtResource("1_vre1c")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_af14a"]
+atlas = ExtResource("1_vre1c")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1klnj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3hfbw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j1i5p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l4u3x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kcn2i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e6jxr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aqwq2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_af14a")
+}],
+"loop": true,
+"name": &"Blinking",
+"speed": 5.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_opram"]
 radius = 25.0
@@ -9,8 +66,10 @@ radius = 25.0
 
 [node name="Timer" type="Timer" parent="."]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_vre1c")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_1klnj")
+animation = &"Blinking"
+autoplay = "Blinking"
 
 [node name="characterAudio" type="AudioStreamPlayer2D" parent="."]
 visible = false
