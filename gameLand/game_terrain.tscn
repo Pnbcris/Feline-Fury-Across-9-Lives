@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://xojog34i1q4g"]
+
+[ext_resource type="Texture2D" uid="uid://nvf13vcikpst" path="res://Sprites/importedTextures/Textures-16.png" id="1_picrv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v87n3"]
+size = Vector2(16, 16)
+
+[node name="gameTerrain" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_picrv")
+region_enabled = true
+region_rect = Rect2(16, 463.5, 16, 17)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+visible = false
+shape = SubResource("RectangleShape2D_v87n3")

@@ -1,19 +1,25 @@
-[gd_scene load_steps=2 format=3 uid="uid://diy5yr2y0vw3q"]
+[gd_scene load_steps=3 format=3 uid="uid://diy5yr2y0vw3q"]
+
+[ext_resource type="Texture2D" uid="uid://nqs3f33djbat" path="res://Sprites/currency/hiddenCoins_64x64.png" id="1_vre1c"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_opram"]
-radius = 6.32456
+radius = 25.0
 
 [node name="mainCharacter" type="Node2D"]
 
 [node name="Timer" type="Timer" parent="."]
 
-[node name="Camera2D" type="Camera2D" parent="."]
-
 [node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_vre1c")
 
 [node name="characterAudio" type="AudioStreamPlayer2D" parent="."]
+visible = false
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+visible = false
 shape = SubResource("CircleShape2D_opram")
+
+[node name="Marker2D" type="Marker2D" parent="."]
