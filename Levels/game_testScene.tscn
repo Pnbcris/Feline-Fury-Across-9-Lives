@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dnefo27fxrhne"]
 
-[ext_resource type="PackedScene" uid="uid://diy5yr2y0vw3q" path="res://Characters/main_character.tscn" id="1_k8mav"]
-[ext_resource type="PackedScene" uid="uid://ccbfj40pu16cu" path="res://gameLand/tile_map_layer_Layer.tscn" id="2_66vcd"]
+[ext_resource type="PackedScene" uid="uid://diy5yr2y0vw3q" path="res://Characters/OminousCat.tscn" id="1_k8mav"]
+[ext_resource type="PackedScene" uid="uid://ccbfj40pu16cu" path="res://Environments/TEST_gameTile.tscn" id="2_66vcd"]
 
 [node name="mainCharacter" instance=ExtResource("1_k8mav")]
 
